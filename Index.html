@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沃爾希7月電子報</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-transition {
+            transition: all 0.5s ease;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        /* Earthy Khaki color scheme */
+        .bg-earth-dark {
+            background-color: #9B7E55;
+        }
+        .bg-earth {
+            background-color: #C2A878;
+        }
+        .bg-earth-light {
+            background-color: #E5D9B6;
+        }
+        .text-earth-dark {
+            color: #6B5B3D;
+        }
+        .text-earth {
+            color: #9B7E55;
+        }
+        .hover-earth:hover {
+            background-color: #B29B6F;
+        }
+        .border-earth {
+            border-color: #9B7E55;
+        }
+        .ring-earth {
+            --tw-ring-color: #9B7E55;
+        }
+        .custom-ul {
+            list-style: disc; /* Or 'circle', 'square' */
+            padding-left: 1.5rem; /* Indent the list items */
+        }
+        .custom-ul li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-earth-light">
+    <nav class="bg-earth-dark text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <h1 class="text-2xl font-bold">沃爾希7月電子報</h1>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#economy" class="hover:text-gray-200 transition font-medium">股市總體經濟</a>
+                <a href="#realestate" class="hover:text-gray-200 transition font-medium">房市數據</a>
+                <a href="#news" class="hover:text-gray-200 transition font-medium">近期時事</a>
+                <a href="#contact" class="hover:text-gray-200 transition font-medium">聯絡我們</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-earth pb-4">
+            <div class="container mx-auto px-4 flex flex-col space-y-3">
+                <a href="#economy" class="block py-2 hover-earth px-3 rounded font-medium">股市總體經濟</a>
+                <a href="#realestate" class="block py-2 hover-earth px-3 rounded font-medium">房市數據</a>
+                <a href="#news" class="block py-2 hover-earth px-3 rounded font-medium">近期時事</a>
+                <a href="#contact" class="block py-2 hover-earth px-3 rounded font-medium">聯絡我們</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-r from-earth-dark to-earth text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">沃爾希7月電子報</h1>
+            <p class="text-xl md:text-2xl mb-8 font-medium">輕鬆掌握最新時事，洞察市場先機。</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#economy" class="bg-white text-earth-dark px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">了解市場</a>
+                <a href="#contact" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-earth-dark transition">聯絡我們</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-12 bg-white text-gray-800">
+        <div class="container mx-auto px-4">
+            <p class="text-lg mb-6 leading-relaxed">
+                <strong class="text-earth-dark">親愛的沃爾希訂閱者，您好！</strong><br>
+                歡迎閱讀《沃爾希7月電子報》！在這個多變的7月，全球經濟、股市與房市都經歷了關鍵時刻。本期我們將帶您用最白話的方式，解析近期市場動態，並連結到對您個人資產的影響。準備好輕鬆掌握最新時事，洞察市場先機了嗎？讓我們開始吧！
+            </p>
+
+            <h2 class="text-2xl font-bold mb-6 text-earth-dark">本期重點速覽</h2>
+            <ul class="custom-ul text-lg leading-relaxed">
+                <li><a href="#economy" class="text-earth hover:underline font-medium">【總經解讀】全球央行政策動向，會讓你的錢包變輕還是變重？</a></li>
+                <li><a href="#economy" class="text-earth hover:underline font-medium">【股市觀測】AI熱潮還能追嗎？解析台股與美股的下一步</a></li>
+                <li><a href="#realestate" class="text-earth hover:underline font-medium">【房市聚焦】7月房市新制上路，房價是漲是跌？</a></li>
+                <li><a href="#news" class="text-earth hover:underline font-medium">【財經新知】搞懂「核心通膨」，它跟你有什麼關係？</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="economy" class="py-16 bg-earth-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">股市總體經濟：看懂大環境，掌握投資方向</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden border border-earth">
+                    <div class="bg-earth-dark h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">【總體經濟儀表板】</h3>
+                        <p class="text-gray-700 mb-4 text-sm">這些數字就像是經濟的健康報告，幫助我們了解大環境的變化：</p>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">GDP成長率 (經濟成長速度)</span>
+                                <span class="font-bold text-earth-dark">3.8%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 數字越高，代表國家賺錢能力越強，經濟越有活力。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">失業率 (工作機會多寡)</span>
+                                <span class="font-bold text-earth-dark">3.0%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 失業率越低，表示找工作越容易，大家消費力也越好。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">通貨膨脹率 (物價上漲速度)</span>
+                                <span class="font-bold text-earth-dark">2.3%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 物價漲太快，你的錢就變薄了！這個數字反映錢的購買力。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">基準利率 (央行借錢成本)</span>
+                                <span class="font-bold text-earth-dark">1.85%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 央行設定的「錢有多貴」，它會影響你的房貸、車貸和定存利息！</p>
+                        </div>
+                        <p class="text-sm mt-4 text-gray-800 font-medium">
+                            <strong class="text-earth-dark">小結：</strong>從這些數字來看，目前的經濟表現穩健，物價漲幅雖然存在，但幅度還算在可控範圍內。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden border border-earth">
+                    <div class="bg-earth-dark h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">【全球股市速覽】</h3>
+                        <p class="text-gray-700 mb-4 text-sm">這個月，全球股市表現可以說是「幾家歡樂幾家愁」：</p>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">台灣加權指數</span>
+                                <span class="font-bold text-green-700">23,456.78 <span class="text-sm">+1.8%</span></span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 台股持續上攻，主要受惠於科技股的熱潮。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">道瓊工業平均 (美國老牌股)</span>
+                                <span class="font-bold text-green-700">39,875.32 <span class="text-sm">+1.2%</span></span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 美國藍籌股表現穩健，顯示市場對經濟信心。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">納斯達克指數 (美國科技股)</span>
+                                <span class="font-bold text-green-700">17,245.68 <span class="text-sm">+0.9%</span></span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 科技股依然受到追捧，特別是AI相關概念股。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">上證指數 (中國股市)</span>
+                                <span class="font-bold text-red-700">3,745.21 <span class="text-sm">-0.5%</span></span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 中國股市略有下跌，可能受到內部政策或經濟數據影響。</p>
+                        </div>
+                        <p class="text-sm mt-4 text-gray-800 font-medium">
+                            <strong class="text-earth-dark">洞察：</strong>股市有漲有跌很正常，重點是理解其背後的原因，而非盲目跟風。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden border border-earth">
+                    <div class="bg-earth-dark h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">【本月產業焦點】</h3>
+                        <p class="text-gray-700 mb-4 text-sm">看看哪些產業是這個月的「明星」，資金都往哪裡跑了？</p>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">半導體</span>
+                                <div class="w-1/2 bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-earth-dark h-2.5 rounded-full" style="width: 92%"></div>
+                                </div>
+                                <span class="font-bold text-earth-dark">+9.2%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 AI熱潮持續發威，讓相關晶片製造商和設計公司表現亮眼。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">金融</span>
+                                <div class="w-1/2 bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-earth-dark h-2.5 rounded-full" style="width: 58%"></div>
+                                </div>
+                                <span class="font-bold text-earth-dark">+5.8%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 在利率穩定的環境下，銀行和保險等金融業者表現穩健。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">電信</span>
+                                <div class="w-1/2 bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-earth-dark h-2.5 rounded-full" style="width: 67%"></div>
+                                </div>
+                                <span class="font-bold text-earth-dark">+6.7%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 網路基礎建設和5G應用需求持續成長，帶動電信業績。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">能源</span>
+                                <div class="w-1/2 bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-earth-dark h-2.5 rounded-full" style="width: 34%"></div>
+                                </div>
+                                <span class="font-bold text-earth-dark">+3.4%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 國際油價波動影響，但整體需求仍支撐能源產業表現。</p>
+                        </div>
+                        <p class="text-sm mt-4 text-gray-800 font-medium">
+                            <strong class="text-earth-dark">洞察：</strong>了解這些產業表現，能幫助你判斷市場資金的流向，但投資前務必做好功課。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="realestate" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">房市數據：買房、租房前，這些你必須知道！</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden border border-earth p-6">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800">【主要城市房價趨勢】</h3>
+                    <div class="h-64 relative">
+                        <canvas id="housingChart"></canvas>
+                    </div>
+                    <p class="text-sm mt-4 text-gray-800 font-medium">
+                        <strong class="text-earth-dark">解讀：</strong>從這張圖可以看到，台北、新北和台中的房價指數在過去幾個月都持續上漲。如果你正考慮在這幾個城市買房，可能會發現房價壓力不小；但如果你是房東或已經有房產，資產價值可能有所增加。
+                    </p>
+                </div>
+                
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden border border-earth p-6">
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800">【房市交易熱不熱？】</h3>
+                    <div class="h-64 relative">
+                        <canvas id="transactionChart"></canvas>
+                    </div>
+                    <p class="text-sm mt-4 text-gray-800 font-medium">
+                        <strong class="text-earth-dark">解讀：</strong>這張圖顯示，從2月到7月，房市的交易量持續上升。這說明儘管房價高漲，但市場買氣依然熱絡，許多人仍然選擇進場購屋。
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden border border-earth">
+                    <div class="bg-earth-dark h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">【房貸利率：你的負擔輕重？】</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">30年期固定</span>
+                                <span class="font-bold text-earth-dark">2.78%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 這是目前銀行提供的主要房貸利率，它直接影響你每月要繳的房貸金額。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">15年期固定</span>
+                                <span class="font-bold text-earth-dark">2.15%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 貸款年限較短，月付金較高但總利息較少。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">5/1 ARM (前5年固定)</span>
+                                <span class="font-bold text-earth-dark">3.25%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 利率在特定時間後會浮動，適合短期內有還款計畫者。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden border border-earth">
+                    <div class="bg-earth-dark h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">【房市供需：房子好不好買？】</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">新建案數量</span>
+                                <span class="font-bold text-earth-dark">+16.7%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 新建案變多，意味著市場供給增加，你的選擇也變多了。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">待售房屋</span>
+                                <span class="font-bold text-earth-dark">-5.8%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 市場上等著賣的房子變少，這代表供給有點吃緊，可能是房價不易下跌的原因之一。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">平均銷售天數</span>
+                                <span class="font-bold text-earth-dark">24天</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 房子平均只要24天就能賣掉，這說明買氣旺盛，你可能需要更快做決定。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden border border-earth">
+                    <div class="bg-earth-dark h-2"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">【租金市場：租屋族看這裡！】</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">台北市平均租金</span>
+                                <span class="font-bold text-earth-dark">$29,800/月</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 台北市的平均月租金負擔。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">新北市平均租金</span>
+                                <span class="font-bold text-earth-dark">$21,500/月</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 新北市的平均月租金負擔。</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-medium">租金年增率</span>
+                                <span class="font-bold text-earth-dark">+4.6%</span>
+                            </div>
+                            <p class="text-sm text-gray-600 pl-4">👉 租金每年上漲近5%，對租屋族來說是個不小的負擔。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="py-16 bg-earth-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">近期時事：這些財經新聞，跟你有關！</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden border border-earth">
+                    <div class="bg-earth-light h-48 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-earth-dark" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-earth-light text-earth-dark text-xs font-medium px-2.5 py-0.5 rounded">財經</span>
+                            <span class="text-gray-600 text-sm ml-auto">2025/07/20</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">央行宣布升息0.125個百分點，因應通膨壓力</h3>
+                        <p class="text-gray-700 mb-4 text-sm">
+                            <strong class="text-earth-dark">白話解讀：</strong>台灣央行今天宣布升息，簡單來說就是把「借錢的利息」調高了一點點。這樣做的目的是為了**抑制物價持續上漲（通膨）**，讓大家花錢比較謹慎。
+                            <strong class="text-earth-dark">對你的影響：</strong>這可能意味著你的**房貸、車貸壓力會稍微增加**，但另一方面，如果你有定存，利息收入也會變多一點喔！
+                        </p>
+                        <a href="#" class="text-earth-dark font-bold hover:text-earth transition">閱讀更多 →</a> </div>
+                </div>
+                
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden border border-earth">
+                    <div class="bg-earth-light h-48 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-earth-dark" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-earth-light text-earth-dark text-xs font-medium px-2.5 py-0.5 rounded">房市</span>
+                            <span class="text-gray-600 text-sm ml-auto">2025/07/18</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">北台灣房市交易創五年新高，專家：剛性需求持續釋放</h3>
+                        <p class="text-gray-700 mb-4 text-sm">
+                            <strong class="text-earth-dark">白話解讀：</strong>最新數據顯示，今年上半年北台灣（例如台北、新北）的房子交易量創下了五年來的新高。專家認為，這是因為許多人有實際居住的需求，所以即使房價高，還是會努力買房。
+                            <strong class="text-earth-dark">對你的影響：</strong>這說明市場上的買氣很強，如果你正在觀望買房，可能需要加快腳步，因為搶手的好物件去化速度很快。
+                        </p>
+                        <a href="#" class="text-earth-dark font-bold hover:text-earth transition">閱讀更多 →</a> </div>
+                </div>
+                
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden border border-earth">
+                    <div class="bg-earth-light h-48 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-earth-dark" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-earth-light text-earth-dark text-xs font-medium px-2.5 py-0.5 rounded">產業</span>
+                            <span class="text-gray-600 text-sm ml-auto">2025/07/15</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">AI晶片需求爆發，台積電Q3營收預估成長15%</h3>
+                        <p class="text-gray-700 mb-4 text-sm">
+                            <strong class="text-earth-dark">白話解讀：</strong>隨著ChatGPT等「生成式AI」越來越受歡迎，全世界對高性能AI晶片的需求也跟著水漲船高。台灣的台積電是全球最大的晶片代工廠，因此分析師預估他們第三季的收入會大幅成長。
+                            <strong class="text-earth-dark">對你的影響：</strong>台灣股市很受科技股影響，台積電表現好通常也能帶動大盤。這表示台灣的科技產業在全球市場上扮演著關鍵角色。
+                        </p>
+                        <a href="#" class="text-earth-dark font-bold hover:text-earth transition">閱讀更多 →</a> </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 bg-earth-dark text-white font-medium rounded-lg hover:bg-earth transition">
+                    查看更多新聞
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-earth-dark text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">聯絡我們</h2>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-earth p-8 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">沃爾希總經電子報</h3>
+                        <p class="mb-6 text-gray-800 font-medium">我們提供專業的財經資訊與分析，協助您做出明智的投資決策。</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center text-gray-800 font-medium">
+                                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span>wealthyfmc@gmail.com</span>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="md:w-1/2 p-8 bg-white text-gray-800">
+                        <h3 class="text-xl font-semibold mb-6">傳送訊息給我們</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="name">姓名</label>
+                                <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-earth" type="text" id="name" placeholder="請輸入您的姓名">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="email">電子郵件</label>
+                                <input class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-earth" type="email" id="email" placeholder="請輸入您的電子郵件">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="message">訊息內容</label>
+                                <textarea class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-earth" id="message" rows="4" placeholder="請輸入您的訊息"></textarea>
+                            </div>
+                            <button type="button" class="w-full bg-earth-dark text-white py-2 px-4 rounded-md hover:bg-earth transition font-medium">傳送訊息</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-bold">沃爾希7月電子報</span>
+                </div>
+                <div class="text-sm text-white">
+                    <p class="mb-2">
+                        <strong class="text-earth">【重要免責聲明】</strong><br>
+                        本電子報所提供的所有內容，包括總體經濟分析、股市、房市趨勢及財經新聞等，僅為**分享知識與市場觀察**之用。這些資訊不應被視為任何形式的**投資建議、法律、稅務或會計專業意見**。您在做出任何投資決策前，應尋求獨立專業顧問的建議，並自行承擔所有投資風險。本電子報不對任何依賴其內容而造成的損失負責。市場有風險，投資需謹慎。
+                    </p>
+                    <p>© 2025 沃爾希. 版權所有. 更新日期: 2025/07/22</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        // 行動裝置選單切換
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 房價趨勢圖 - 更新至2025年7月的數據
+        const housingCtx = document.getElementById('housingChart').getContext('2d');
+        const housingChart = new Chart(housingCtx, {
+            type: 'line',
+            data: {
+                labels: ['2月', '3月', '4月', '5月', '6月', '7月'],
+                datasets: [
+                    {
+                        label: '台北市 (萬元/坪)', // 更明確的單位
+                        data: [78, 79, 81, 83, 85, 87],
+                        borderColor: '#9B7E55',
+                        backgroundColor: 'rgba(155, 126, 85, 0.1)',
+                        tension: 0.3,
+                        fill: true
+                    },
+                    {
+                        label: '新北市 (萬元/坪)',
+                        data: [56, 58, 59, 61, 63, 65],
+                        borderColor: '#6B5B3D',
+                        backgroundColor: 'rgba(107, 91, 61, 0.1)',
+                        tension: 0.3,
+                        fill: true
+                    },
+                    {
+                        label: '台中市 (萬元/坪)',
+                        data: [45, 47, 48, 50, 52, 54],
+                        borderColor: '#C2A878',
+                        backgroundColor: 'rgba(194, 168, 120, 0.1)',
+                        tension: 0.3,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.parsed.y + ' 萬元/坪';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        title: {
+                            display: true,
+                            text: '房價指數 (萬元/坪)' // 更明確的單位
+                        }
+                    }
+                }
+            }
+        });
+        
+        // 房市交易量圖 - 更新至2025年7月的數據
+        const transactionCtx = document.getElementById('transactionChart').getContext('2d');
+        const transactionChart = new Chart(transactionCtx, {
+            type: 'bar',
+            data: {
+                labels: ['2月', '3月', '4月', '5月', '6月', '7月'],
+                datasets: [
+                    {
+                        label: '交易件數',
+                        data: [1850, 1920, 2050, 2180, 2340, 2520],
+                        backgroundColor: 'rgba(155, 126, 85, 0.7)',
+                        borderColor: '#9B7E55',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.parsed.y + ' 件';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '交易件數'
+                        }
+                    }
+                }
+            }
+        });
+        
+        // 表單提交事件 (此處僅為前端提示，實際需後端處理)
+        document.querySelector('form button').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || !message) {
+                alert('請填寫所有欄位');
+                return;
+            }
+            
+            alert('感謝您的訊息！我們會盡快回覆您。');
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        });
+    </script>
+</body>
+</html>

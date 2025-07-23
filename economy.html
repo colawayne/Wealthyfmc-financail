@@ -1,289 +1,60 @@
+
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>總體經濟分析 - 沃爾希金融電子報</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Microsoft JhengHei', Arial, sans-serif;
-            line-height: 1.6;
-            color: #000000;
-            background: linear-gradient(135deg, #D2B48C 0%, #8B7355 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .logo {
-            width: 120px;
-            height: auto;
-            margin-bottom: 15px;
-            background: white;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .back-button {
-            display: inline-block;
-            background: #8B7355;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 25px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .back-button:hover {
-            background: #6B5635;
-            transform: translateY(-2px);
-        }
-
-        .analysis-section {
-            background: rgba(255, 255, 255, 0.95);
-            margin-bottom: 30px;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-
-        .section-title {
-            font-size: 28px;
-            font-weight: bold;
-            color: #8B7355;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #D2B48C;
-            padding-bottom: 10px;
-        }
-
-        .data-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 25px;
-        }
-
-        .data-card {
-            background: #F5F5DC;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 5px solid #8B7355;
-        }
-
-        .data-title {
-            font-weight: bold;
-            color: #8B7355;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .data-value {
-            font-size: 24px;
-            font-weight: bold;
-            color: #000000;
-            margin-bottom: 5px;
-        }
-
-        .data-change {
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .positive { color: #228B22; }
-        .negative { color: #DC143C; }
-
-        .risk-alert {
-            background: #FFE4E1;
-            border: 2px solid #DC143C;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .risk-title {
-            color: #DC143C;
-            font-weight: bold;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .update-time {
-            text-align: right;
-            color: #666;
-            font-size: 12px;
-            margin-top: 15px;
-            font-style: italic;
-        }
-
-        .key-points {
-            background: #F0F8FF;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            border-left: 5px solid #4169E1;
-        }
-
-        .key-points h4 {
-            color: #4169E1;
-            margin-bottom: 15px;
-        }
-
-        .key-points ul {
-            padding-left: 20px;
-        }
-
-        .key-points li {
-            margin-bottom: 8px;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            .data-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-title {
-                font-size: 24px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>總體經濟指標｜沃爾希財富商行</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { background-color: #f0e1c0; color: #000; font-family: sans-serif; margin: 0; }
+    nav { background: #ddd; padding: 10px; display: flex; gap: 20px; }
+    nav a { color: black; text-decoration: none; font-weight: bold; }
+    section { padding: 20px; }
+    footer { text-align: center; padding: 1rem; background-color: #eee; margin-top: 40px; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="logo.png" alt="沃爾希金融電子報" class="logo">
-            <h1>總體經濟分析</h1>
-            <a href="index.html" class="back-button">← 返回首頁</a>
-        </div>
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="economy.html">總經</a>
+    <a href="stocks.html">股市</a>
+    <a href="member-area.html">會員專區</a>
+  </nav>
 
-        <div class="analysis-section">
-            <h2 class="section-title">美國總體經濟現況</h2>
-            <div class="data-grid">
-                <div class="data-card">
-                    <div class="data-title">美國GDP成長率</div>
-                    <div class="data-value">-0.5%</div>
-                    <div class="data-change negative">第一季年化季減率</div>
-                </div>
-                <div class="data-card">
-                    <div class="data-title">通膨率(CPI)</div>
-                    <div class="data-value">2.7%</div>
-                    <div class="data-change positive">6月年增率，高於預期2.6%</div>
-                </div>
-                <div class="data-card">
-                    <div class="data-title">聯邦基金利率</div>
-                    <div class="data-value">4.50%</div>
-                    <div class="data-change">維持不變</div>
-                </div>
-                <div class="data-card">
-                    <div class="data-title">失業率</div>
-                    <div class="data-value">4.1%</div>
-                    <div class="data-change">接近長期失業率預期</div>
-                </div>
-            </div>
-            
-            <div class="key-points">
-                <h4>關鍵觀察重點</h4>
-                <ul>
-                    <li>美國第一季GDP萎縮0.5%，顯示經濟成長放緩</li>
-                    <li>通膨率回升至2.7%，高於聯準會2%目標</li>
-                    <li>關稅政策不確定性影響經濟前景</li>
-                    <li>多數機構預測2025年GDP成長僅1.3-1.5%</li>
-                </ul>
-            </div>
+  <section>
+    <h2>最新總經數據（更新至 2025/07/23 凌晨 05:00）</h2>
+    <ul>
+      <li>美國10年期公債殖利率：4.28%（2025/07/22）</li>
+      <li>美國通膨（CPI YoY）：3.0%（2025/06）</li>
+      <li>美國核心通膨（Core CPI YoY）：3.3%（2025/06）</li>
+      <li>美國失業率：4.1%（2025/06）</li>
+      <li>美國GDP成長率：1.8%（2025Q1 初值）</li>
+      <li>ISM製造業指數：49.6（2025/06）</li>
+      <li>台灣CPI年增率：2.3%（2025/06）</li>
+      <li>台灣失業率：3.4%（2025/06）</li>
+      <li>中國GDP年增率：4.7%（2025Q2）</li>
+      <li>中國製造業PMI：49.0（2025/06）</li>
+    </ul>
+  </section>
 
-            <div class="risk-alert">
-                <div class="risk-title">⚠️ 風險提醒</div>
-                <p>摩根大通預測2025年下半年經濟衰退機率達40%，主要風險來自關稅政策衝擊和通膨壓力。投資人應密切關注聯準會政策動向。</p>
-            </div>
-            
-            <div class="update-time">數據更新時間：2025年7月22日</div>
-        </div>
+  <section>
+    <h3>觀察重點與沃爾希觀點</h3>
+    <p>
+      美國10年期公債殖利率自7月中旬以來持穩於4.2%上下，市場反映聯準會「長期高利率」預期未鬆動。
+      此水準反映資金成本偏高，對股市評價有壓抑作用，企業融資成本亦無明顯改善。
+    </p>
+    <p>
+      CPI與核心CPI雖持續下滑，但年增率仍處於3%以上，距離聯準會2%目標仍有一段距離，使降息預期遞延至2026年。
+      失業率緩步上升，暗示勞動市場開始降溫，惟未形成明顯衰退訊號。
+    </p>
+    <p>
+      沃爾希建議：現階段維持對高利率環境下的資產配置審慎評估，並觀察美國Q2 GDP初值與企業財報是否透露成長放緩趨勢，
+      以作為下半年資產再平衡的策略依據。
+    </p>
+  </section>
 
-        <div class="analysis-section">
-            <h2 class="section-title">大宗商品市場</h2>
-            <div class="data-grid">
-                <div class="data-card">
-                    <div class="data-title">黃金價格</div>
-                    <div class="data-value">$2,410</div>
-                    <div class="data-change positive">每盎司，接近歷史高點</div>
-                </div>
-                <div class="data-card">
-                    <div class="data-title">WTI原油</div>
-                    <div class="data-value">$78.5</div>
-                    <div class="data-change positive">每桶，地緣風險支撐</div>
-                </div>
-                <div class="data-card">
-                    <div class="data-title">布蘭特原油</div>
-                    <div class="data-value">$82.3</div>
-                    <div class="data-change positive">每桶，供應緊張</div>
-                </div>
-                <div class="data-card">
-                    <div class="data-title">銅價</div>
-                    <div class="data-value">$9,850</div>
-                    <div class="data-change negative">每噸，需求疑慮</div>
-                </div>
-            </div>
-            
-            <div class="key-points">
-                <h4>大宗商品重點</h4>
-                <ul>
-                    <li>黃金受避險需求推升，接近歷史高點</li>
-                    <li>原油價格受地緣政治風險支撐</li>
-                    <li>銅價反映全球經濟成長疑慮</li>
-                    <li>通膨預期影響商品價格走勢</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="analysis-section">
-            <h2 class="section-title">聯準會政策展望</h2>
-            <div class="key-points">
-                <h4>政策重點</h4>
-                <ul>
-                    <li>維持聯邦基金利率4.50%不變</li>
-                    <li>通膨目標2%，當前2.7%仍高於目標</li>
-                    <li>市場預期年底前可能降息2-3次</li>
-                    <li>關注就業市場變化與經濟成長動能</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="analysis-section">
-            <h2 class="section-title">全球經濟風險</h2>
-            <div class="key-points">
-                <h4>主要風險因素</h4>
-                <ul>
-                    <li>美中貿易關稅政策不確定性</li>
-                    <li>地緣政治緊張局勢升溫</li>
-                    <li>歐洲經濟成長疲弱</li>
-                    <li>新興市場資金流出壓力</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+  <footer>
+    <p>© 2025 沃爾希財富商行｜統編 93397738</p>
+  </footer>
 </body>
 </html>
-
